@@ -1,0 +1,27 @@
+.languageone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #4d5358;
+  position: relative;
+  width: 100%;
+  img {
+    display: none;
+    padding: 0;
+    border: none;
+    right: 0px;
+    position: absolute;
+  }
+  &:hover {
+    background: #f2f4f8;
+    img {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.dropupboxitem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #697077;
+  background: #ffffff;
+  border-width: 4px 8px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-radius: 4px;
+  &-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+    gap: 6px;
+    &-description {
+      display: none;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      padding-left: 4px;
+      margin-left: 4px;
+      border-left: 3px solid #f4f4f4;
+    }
+    &-hovertext {
+      display: none;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      span {
+        background: #dde1e6;
+        border-radius: 4px;
+      }
+    }
+    &-hovertext.status-show {
+      display: block;
+    }
+  }
+  &:hover {
+    background: #f4f4f4;
+    border-color: #f4f4f4;
+  }
+}
+.option-show {
+  display: block;
+}

@@ -1,0 +1,14 @@
+body {
+  width: 415px;
+  margin: 0;
+  background: #fafbfe;
+  position: relative;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('../../font/Roboto.ttf') format('truetype');
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,0 +1,10 @@
+.slider {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #d0e2ff;
+  &:hover {
+    background: #a6c8ff;
+  }
+}
