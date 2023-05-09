@@ -1,0 +1,98 @@
+.summarize {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 4px;
+  &-userprompt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    background: #f2f4f8;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #697077;
+    width: 90%;
+    &-title {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      font-weight: 600;
+      justify-content: space-between;
+      img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+    }
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+    background: #f4f4f4;
+    border-radius: 4px;
+    width: 90%;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #4d5358;
+    &-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      &-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      &-rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+        img {
+          width: 18;
+          height: 18px;
+        }
+      }
+    }
+    &-introduction {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+    }
+    &-partial {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      span {
+        padding: 0 8px;
+        mix-blend-mode: color-burn;
+        border-radius: 4px;
+        background-color: #4589ff;
+        color: #000;
+      }
+    }
+  }
+}
+.active {
+  background: #4d5358;
+}

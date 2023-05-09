@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
-import Header from '../../Header';
+import Summarize from '../../../pages/Summarize';
+import Timeline from '../../../pages/Timeline';
 import logo from '../../../assets/img/single.png';
 import clock from '../../../assets/img/clock.png';
 import gear from '../../../assets/img/gear.png';
@@ -58,16 +59,36 @@ export default function FooterDropupBox() {
           </div>
         </div>
         <div className="footerdropupbox-frequencyaction-container">
-          {frequencyitems.map((frequencyitem) => (
-            <Link component={Header}>
-              <DropupBoxItem
-                url={frequencyitem.url}
-                hoverstatus={frequencyitem.hoverstatus}
-                status={frequencyitem.status}
-                description={frequencyitem.description}
-              />
-            </Link>
-          ))}
+          <Link component={Summarize}>
+            <DropupBoxItem
+              url={frequencyitems[0].url}
+              hoverstatus={frequencyitems[0].hoverstatus}
+              status={frequencyitems[0].status}
+              description={frequencyitems[0].description}
+            />
+          </Link>
+          <Link component={Timeline}>
+            <DropupBoxItem
+              url={frequencyitems[1].url}
+              description={frequencyitems[1].description}
+            />
+          </Link>
+          <Link component={Summarize}>
+            <DropupBoxItem
+              url={frequencyitems[2].url}
+              hoverstatus={frequencyitems[2].hoverstatus}
+              status={frequencyitems[2].status}
+              description={frequencyitems[2].description}
+            />
+          </Link>
+          <Link component={Summarize}>
+            <DropupBoxItem
+              url={frequencyitems[3].url}
+              hoverstatus={frequencyitems[3].hoverstatus}
+              status={frequencyitems[3].status}
+              description={frequencyitems[3].description}
+            />
+          </Link>
         </div>
       </div>
       <div className="footerdropupbox-devider" />

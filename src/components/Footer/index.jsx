@@ -24,7 +24,10 @@ export default function Footer() {
       <div className="footer-inputicon">
         <img src={logo2} alt="logo" />
       </div>
-      <div className={`box ${isExpanded ? 'hidden' : ''}`}>
+      <div
+        className={`box ${isExpanded ? 'hidden' : ''}`}
+        onClick={handleClick}
+      >
         <FooterDropupBox />
       </div>
     </div>

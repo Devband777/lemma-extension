@@ -9,10 +9,6 @@ const Popup = () => {
   return (
     <div className="App">
       <Header />
-      {/* <Link component={Landing}>
-        <Landing />
-      </Link> */}
-
       <Router>
         <Landing />
       </Router>
