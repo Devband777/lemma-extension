@@ -11,12 +11,12 @@ export default function Footer(props) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [disabled, setDisabled] = useState(false);
-
-  useEffect(() => {
-    if (props.page === 'Landing') {
-      setDisabled(true);
-    }
-  }, [props.page]);
+  // console.log(props.page);
+  // useEffect(() => {
+  //   if (props.page === 'Landing') {
+  //     setDisabled(true);
+  //   }
+  // }, [props.page]);
 
   const handleClick = () => {
     setIsExpanded(!isExpanded);
