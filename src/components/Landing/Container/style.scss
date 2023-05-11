@@ -34,10 +34,12 @@
     }
   }
   &-image {
-    height: 180px;
-    width: 75%;
-    padding: 0px 24px;
-    border-radius: 4px;
+    img {
+      height: 180px;
+      width: 90%;
+      padding: 0px 24px;
+      border-radius: 4px;
+    }
   }
   &-wrapper {
     height: 123px;

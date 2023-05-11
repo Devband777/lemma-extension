@@ -50,15 +50,15 @@ export default function Landing(props) {
     }
   }, [mousedOver]);
   return (
-    <div className="landing">
+    <div
+      className="landing"
+      onMouseOver={() => setMousedOver(true)}
+      onMouseOut={() => setMousedOver(false)}
+    >
       <div className="landing-description">
         Explore new learning possibilities with Lemma.
       </div>
-      <div
-        className="landing-container"
-        onMouseOver={() => setMousedOver(true)}
-        onMouseOut={() => setMousedOver(false)}
-      >
+      <div className="landing-container">
         <Container
           title={containers[count].title}
           description={containers[count].description}

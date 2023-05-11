@@ -9,14 +9,13 @@ import './style.scss';
 export default function Header() {
   return (
     <div className="header">
-      <Link component={Landing}>
-        <div className="header-container">
-          <div className="header-container-logo">
-            <img src={logo} alt="logo" />
-          </div>
-          <p>LEMMA</p>
+      <div className="header-container">
+        <div className="header-container-logo">
+          <img src={logo} alt="logo" />
         </div>
-      </Link>
+        <p>LEMMA</p>
+      </div>
+
       <div className="header-dropdowngroup">
         <div className="header-dropdowngroup-left">
           <LanguageDropdown />
