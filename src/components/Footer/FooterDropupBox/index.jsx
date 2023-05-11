@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.scss';
-import Summarize from '../../../pages/Summarize';
-import Timeline from '../../../pages/Timeline';
+import Transcribe from '../../Transcribe';
+import Summarize from '../../Summarize';
+import Timeline from '../../Timeline';
+import Home from '../../Home';
 import logo from '../../../assets/img/single.png';
 import clock from '../../../assets/img/clock.png';
 import gear from '../../../assets/img/gear.png';
@@ -73,7 +75,7 @@ export default function FooterDropupBox() {
               description={frequencyitems[1].description}
             />
           </Link>
-          <Link component={Summarize}>
+          <Link component={Transcribe}>
             <DropupBoxItem
               url={frequencyitems[2].url}
               hoverstatus={frequencyitems[2].hoverstatus}
@@ -81,7 +83,7 @@ export default function FooterDropupBox() {
               description={frequencyitems[2].description}
             />
           </Link>
-          <Link component={Summarize}>
+          <Link component={Home}>
             <DropupBoxItem
               url={frequencyitems[3].url}
               hoverstatus={frequencyitems[3].hoverstatus}

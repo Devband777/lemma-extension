@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 16px;
+  width: 330px;
   isolation: isolate;
   position: relative;
   background: #ffffff;
@@ -39,14 +40,19 @@
   }
   &-wrapper {
     position: relative;
-    height: 90px;
+    height: 126px;
     overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 16px;
+    justify-content: space-around;
     &-timeline {
       position: absolute;
       width: 4px;
-      height: 100px;
+      height: 120px;
       background: #dde1e6;
-      top: 4px;
+      top: 10px;
       left: 6px;
       z-index: -1;
     }

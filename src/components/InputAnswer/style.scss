@@ -1,8 +1,9 @@
-.summarize {
+.inputanswer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+  width: 100%;
   border-radius: 4px;
   &-userprompt {
     display: flex;
@@ -25,15 +26,29 @@
       align-items: center;
       font-weight: 600;
       justify-content: space-between;
-      img {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
+      div {
+        .avatarimg {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          margin-left: 8px;
+        }
+        .dropdownimg {
+          width: 20px;
+          height: 20px;
+          transform: rotate(180deg);
+        }
+        .dropdownimg.hidden {
+          width: 20px;
+          height: 20px;
+          display: inline;
+          transform: none;
+        }
       }
     }
   }
   &-text {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
@@ -93,6 +108,6 @@
     }
   }
 }
-.active {
-  background: #4d5358;
+.hidden {
+  display: flex;
 }

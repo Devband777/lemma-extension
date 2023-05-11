@@ -1,47 +1,32 @@
 import React, { useState } from 'react';
 import './style.scss';
+import TextTitle from '../TextTitle';
 import logo from '../../assets/img/icon-34.png';
-import like from '../../assets/img/like.png';
-import dislike from '../../assets/img/dislike.png';
+import dropdown from '../../assets/img/dropdownarrow.png';
 export default function Summarize() {
-  const [isLikeActive, setIsLikeActive] = useState(false);
-  const handleLikeClick = () => {
-    setIsLikeActive(!isLikeActive);
-  };
-  const [isDislikeActive, setIsDislikeActive] = useState(false);
-  const handleDislikeClick = () => {
-    setIsDislikeActive(!isDislikeActive);
+  const [isExpanded, setIsExpanded] = useState(true);
+  const handleClick = () => {
+    setIsExpanded(!isExpanded);
   };
   return (
     <div className="summarize">
       <div className="summarize-userprompt">
         <div className="summarize-userprompt-title">
           PROMPT
-          <img src={logo} alt="logo" />
+          <div>
+            <img
+              src={dropdown}
+              alt="logo"
+              className={`dropdownimg ${isExpanded ? 'hidden' : ''}`}
+              onClick={handleClick}
+            />
+            <img src={logo} alt="logo" className="avatarimg" />
+          </div>
         </div>
         /Summarize from 00:00 to 00:00
       </div>
-      <div className="summarize-text">
-        <div className="summarize-text-title">
-          <div className="summarize-text-title-container">
-            <img src={logo} alt="logo" />
-            AI RESPONSE
-          </div>
-          <div className="summarize-text-title-rating">
-            <img
-              src={like}
-              alt="logo"
-              className={`${isLikeActive ? 'active' : ''}`}
-              onClick={handleLikeClick}
-            />
-            <img
-              src={dislike}
-              alt="logo"
-              className={`${isDislikeActive ? 'active' : ''}`}
-              onClick={handleDislikeClick}
-            />
-          </div>
-        </div>
+      <div className={`summarize-text ${isExpanded ? 'hidden' : ''}`}>
+        <TextTitle />
         <div className="summarize-text-introduction">
           /Summarize from 00:00 to 00:00
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assets/img/picon.png';
 import './style.scss';
 export default function Partial() {
   return (
@@ -7,7 +8,10 @@ export default function Partial() {
         <div className="partial-timetitle-dot" />
         <div className="partial-timetitle-text">00:05</div>
       </div>
-      <div className="partial-card">Platos 4 ideas for life fulfillment</div>
+      <div className="partial-card">
+        Platos 4 ideas for life fulfillment
+        <img src={logo} alt="logo" />
+      </div>
     </div>
   );
 }

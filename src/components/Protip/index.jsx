@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
+import Home from '../Home';
 import './style.scss';
 import info from '../../assets/img/info.png';
+import { Link } from 'route-lite';
 export default function Protip() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const handleClick = () => {
-    setIsExpanded(!isExpanded);
-  };
   return (
-    <div className={`protip ${isExpanded ? 'hidden' : ''}`}>
+    <div className="protip">
       <div className="protip-header">
         PRO TIP
         <img src={info} alt="logo" />
       </div>
       <div className="protip-container">
-        <div onClick={handleClick}>
-          Click or type / to select frequently used actions. Dismiss
-        </div>
+        <Link component={Home}>
+          Click or type / to select frequently used actions.
+          <div className="protip-container-link">Dismiss</div>
+        </Link>
         <span>Ex: /show video timeline</span>
       </div>
     </div>

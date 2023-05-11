@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../../assets/img/introimage.png';
-import Partial from './Partial';
+import Partial from '../../Partial';
 import './style.scss';
 export default function Container() {
   return (
