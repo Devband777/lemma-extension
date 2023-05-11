@@ -4,12 +4,12 @@ import TextTitle from '../TextTitle';
 import logo from '../../assets/img/icon-34.png';
 import dropdown from '../../assets/img/dropdownarrow.png';
 export default function InputAnswer(props) {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isInputAnswerExpand, setIsInputAnswerExpand] = useState(false);
   const handleClick = () => {
-    setIsExpanded(!isExpanded);
+    setIsInputAnswerExpand(!isInputAnswerExpand);
   };
   return (
-    <div className="inputanswer">
+    <div className={`inputanswer ${props.inputSentence === '' ? 'show' : ''}`}>
       <div className="inputanswer-userprompt">
         <div className="inputanswer-userprompt-title">
           PROMPT
@@ -17,18 +17,35 @@ export default function InputAnswer(props) {
             <img
               src={dropdown}
               alt="logo"
-              className={`dropdownimg ${isExpanded ? 'hidden' : ''}`}
+              className={`dropdownimg ${isInputAnswerExpand ? 'hidden' : ''}`}
               onClick={handleClick}
             />
             <img src={logo} alt="logo" className="avatarimg" />
           </div>
         </div>
-        {props.inputSentence}
+        <div className="inputanswer-userprompt-body">{props.inputSentence}</div>
       </div>
-      <div className={`inputanswer-text ${isExpanded ? 'hidden' : ''}`}>
+      <div
+        className={`inputanswer-text ${isInputAnswerExpand ? 'hidden' : ''}`}
+      >
         <TextTitle />
-        <div className="inputanswer-text-introduction">
-          /Summarize from 00:00 to 00:00
+        <div className="inputanswer-text-userprofile">
+          <div className="inputanswer-text-userprofile-avatar">
+            <img src={logo} alt="logo" />
+          </div>
+          <div className="inputanswer-text-userprofile-container">
+            <div className="inputanswer-text-userprofile-container-name">
+              Name
+            </div>
+            <div className="inputanswer-text-userprofile-container-body">
+              <span>MM/DD/YY</span>
+              <span>-</span>
+              <span>MM/DD/YY</span>
+            </div>
+            <div className="inputanswer-text-userprofile-container-link">
+              Source text
+            </div>
+          </div>
         </div>
         <div className="inputanswer-text-partial">
           <span>Socrates (469/470 BCE - 399 BCE)</span> was a classical Greek

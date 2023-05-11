@@ -59,40 +59,43 @@
     font-family: 'Roboto';
     font-style: normal;
     color: #4d5358;
-    &-title {
+    &-userprofile {
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 100%;
-      justify-content: space-between;
+      gap: 8px;
+      &-avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 100px;
+      }
       &-container {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 22px;
-        img {
-          width: 24px;
-          height: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        &-name {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+          color: #4d5358;
+        }
+        &-body {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 4px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: #697077;
+        }
+        &-link {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #0043ce;
         }
       }
-      &-rating {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 4px;
-        img {
-          width: 18;
-          height: 18px;
-        }
-      }
-    }
-    &-introduction {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 21px;
     }
     &-partial {
       font-weight: 400;
@@ -110,4 +113,7 @@
 }
 .hidden {
   display: flex;
+}
+.show {
+  display: none;
 }

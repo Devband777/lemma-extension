@@ -4,9 +4,9 @@ import TextTitle from '../TextTitle';
 import logo from '../../assets/img/icon-34.png';
 import dropdown from '../../assets/img/dropdownarrow.png';
 export default function Summarize() {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isSummarizeExpand, setIsSummarizeExpand] = useState(false);
   const handleClick = () => {
-    setIsExpanded(!isExpanded);
+    setIsSummarizeExpand(!isSummarizeExpand);
   };
   return (
     <div className="summarize">
@@ -17,7 +17,7 @@ export default function Summarize() {
             <img
               src={dropdown}
               alt="logo"
-              className={`dropdownimg ${isExpanded ? 'hidden' : ''}`}
+              className={`dropdownimg ${isSummarizeExpand ? 'hidden' : ''}`}
               onClick={handleClick}
             />
             <img src={logo} alt="logo" className="avatarimg" />
@@ -25,7 +25,7 @@ export default function Summarize() {
         </div>
         /Summarize from 00:00 to 00:00
       </div>
-      <div className={`summarize-text ${isExpanded ? 'hidden' : ''}`}>
+      <div className={`summarize-text ${isSummarizeExpand ? 'hidden' : ''}`}>
         <TextTitle />
         <div className="summarize-text-introduction">
           /Summarize from 00:00 to 00:00

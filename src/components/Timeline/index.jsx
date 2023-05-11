@@ -5,14 +5,14 @@ import dropdown from '../../assets/img/dropdownarrow.png';
 import Partial from '../Partial';
 import TextTitle from '../TextTitle';
 export default function Timeline() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isTimelineExpand, setIsTimelineExpand] = useState(false);
   const handleClick = () => {
-    setIsExpanded(!isExpanded);
+    setIsTimelineExpand(!isTimelineExpand);
   };
   const [isDropExpanded, setIsDropExpanded] = useState(false);
   const handleDropClick = () => {
     setIsDropExpanded(!isDropExpanded);
-    if (isExpanded === true) setIsExpanded(!isExpanded);
+    if (isTimelineExpand === true) setIsTimelineExpand(!isTimelineExpand);
   };
   return (
     <div className="timeline">
@@ -50,7 +50,7 @@ export default function Timeline() {
           </div>
         </div>
       </div>
-      <div className={`timeline-text ${isExpanded ? 'hidden' : ''}`}>
+      <div className={`timeline-text ${isTimelineExpand ? 'hidden' : ''}`}>
         <TextTitle />
         <div className="timeline-text-introduction">
           Introduction: 00:00 - 01:03

@@ -5,9 +5,9 @@ import dropdown from '../../assets/img/dropdownarrow.png';
 import Partial from '../Partial';
 import TextTitle from '../TextTitle';
 export default function Timeline() {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isTranscribeExpand, setIsTranscribeExpand] = useState(false);
   const handleClick = () => {
-    setIsExpanded(!isExpanded);
+    setIsTranscribeExpand(!isTranscribeExpand);
   };
   return (
     <div className="transcribe">
@@ -18,7 +18,7 @@ export default function Timeline() {
             <img
               src={dropdown}
               alt="logo"
-              className={`dropdownimg ${isExpanded ? 'hidden' : ''}`}
+              className={`dropdownimg ${isTranscribeExpand ? 'hidden' : ''}`}
               onClick={handleClick}
             />
             <img src={logo} alt="logo" className="avatarimg" />
@@ -26,7 +26,9 @@ export default function Timeline() {
         </div>
         /Transcribe from 00:00 to 00:52
       </div>
-      <div className={`transcribe-timeline ${isExpanded ? 'hidden' : ''}`}>
+      <div
+        className={`transcribe-timeline ${isTranscribeExpand ? 'hidden' : ''}`}
+      >
         <TextTitle />
         <div className="transcribe-timeline-container">
           <Partial />
