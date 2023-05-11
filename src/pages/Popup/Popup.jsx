@@ -17,7 +17,7 @@ const Popup = () => {
         <Landing callback={handleCallback} />
       </Router>
       <div style={{ height: '70px' }} />
-      <Footer />
+      <Footer page={stateValue} />
     </div>
   );
 };

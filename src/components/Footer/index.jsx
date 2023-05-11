@@ -6,10 +6,17 @@ import Home from '../Home';
 import { Link } from 'route-lite';
 import './style.scss';
 
-export default function Footer() {
+export default function Footer(props) {
   const textareaRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [inputValue, setInputValue] = useState('');
+  const [disabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    if (props.page === 'Landing') {
+      setDisabled(true);
+    }
+  }, [props.page]);
 
   const handleClick = () => {
     setIsExpanded(!isExpanded);
@@ -38,6 +45,7 @@ export default function Footer() {
         </div>
         <div className="footer-container-input">
           <textarea
+            disabled={disabled}
             ref={textareaRef}
             onChange={autoGrow}
             placeholder="Ask me anything about this video.... "
