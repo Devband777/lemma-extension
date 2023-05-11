@@ -5,7 +5,8 @@ import Protip from '../Protip';
 import logo1 from '../../assets/img/skipimage.png';
 import { Link } from 'route-lite';
 import './style.scss';
-export default function Landing() {
+export default function Landing(props) {
+  props.callback('Landing');
   return (
     <div className="landing">
       <div className="landing-description">

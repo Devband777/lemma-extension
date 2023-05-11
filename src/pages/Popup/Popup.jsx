@@ -6,11 +6,15 @@ import Landing from '../../components/Landing';
 import './Popup.scss';
 
 const Popup = () => {
+  const [stateValue, setStateValue] = useState('');
+  const handleCallback = (childData) => {
+    setStateValue(childData);
+  };
   return (
     <div className="App">
       <Header />
       <Router>
-        <Landing />
+        <Landing callback={handleCallback} />
       </Router>
       <div style={{ height: '70px' }} />
       <Footer />

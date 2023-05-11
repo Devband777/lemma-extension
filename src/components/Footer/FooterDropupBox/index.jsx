@@ -1,8 +1,5 @@
 import React from 'react';
 import './style.scss';
-import Transcribe from '../../Transcribe';
-import Summarize from '../../Summarize';
-import Timeline from '../../Timeline';
 import Home from '../../Home';
 import logo from '../../../assets/img/single.png';
 import clock from '../../../assets/img/clock.png';
@@ -61,7 +58,7 @@ export default function FooterDropupBox() {
           </div>
         </div>
         <div className="footerdropupbox-frequencyaction-container">
-          <Link component={Summarize}>
+          <Link component={() => <Home clickitem="summarize" />}>
             <DropupBoxItem
               url={frequencyitems[0].url}
               hoverstatus={frequencyitems[0].hoverstatus}
@@ -69,13 +66,13 @@ export default function FooterDropupBox() {
               description={frequencyitems[0].description}
             />
           </Link>
-          <Link component={Timeline}>
+          <Link component={() => <Home clickitem="timeline" />}>
             <DropupBoxItem
               url={frequencyitems[1].url}
               description={frequencyitems[1].description}
             />
           </Link>
-          <Link component={Transcribe}>
+          <Link component={() => <Home clickitem="transcribe" />}>
             <DropupBoxItem
               url={frequencyitems[2].url}
               hoverstatus={frequencyitems[2].hoverstatus}

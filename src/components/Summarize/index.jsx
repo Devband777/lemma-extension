@@ -3,8 +3,10 @@ import './style.scss';
 import TextTitle from '../TextTitle';
 import logo from '../../assets/img/icon-34.png';
 import dropdown from '../../assets/img/dropdownarrow.png';
-export default function Summarize() {
-  const [isSummarizeExpand, setIsSummarizeExpand] = useState(false);
+export default function Summarize(props) {
+  const [isSummarizeExpand, setIsSummarizeExpand] = useState(
+    props.clickitem === 'summarize'
+  );
   const handleClick = () => {
     setIsSummarizeExpand(!isSummarizeExpand);
   };

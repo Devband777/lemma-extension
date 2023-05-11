@@ -4,7 +4,9 @@ import TextTitle from '../TextTitle';
 import logo from '../../assets/img/icon-34.png';
 import dropdown from '../../assets/img/dropdownarrow.png';
 export default function InputAnswer(props) {
-  const [isInputAnswerExpand, setIsInputAnswerExpand] = useState(false);
+  const [isInputAnswerExpand, setIsInputAnswerExpand] = useState(
+    props.clickitem === 'collase'
+  );
   const handleClick = () => {
     setIsInputAnswerExpand(!isInputAnswerExpand);
   };

@@ -4,12 +4,14 @@ import logo from '../../assets/img/icon-34.png';
 import dropdown from '../../assets/img/dropdownarrow.png';
 import Partial from '../Partial';
 import TextTitle from '../TextTitle';
-export default function Timeline() {
+export default function Timeline(props) {
   const [isTimelineExpand, setIsTimelineExpand] = useState(false);
   const handleClick = () => {
     setIsTimelineExpand(!isTimelineExpand);
   };
-  const [isDropExpanded, setIsDropExpanded] = useState(false);
+  const [isDropExpanded, setIsDropExpanded] = useState(
+    props.clickitem === 'timeline'
+  );
   const handleDropClick = () => {
     setIsDropExpanded(!isDropExpanded);
     if (isTimelineExpand === true) setIsTimelineExpand(!isTimelineExpand);

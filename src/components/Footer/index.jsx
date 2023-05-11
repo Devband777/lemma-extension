@@ -44,7 +44,9 @@ export default function Footer() {
           />
         </div>
       </div>
-      <Link component={() => <Home inputValue={inputValue} />}>
+      <Link
+        component={() => <Home inputValue={inputValue} clickitem="collase" />}
+      >
         <div className="footer-inputicon" onClick={handleInputClick}>
           <img src={logo2} alt="logo" />
         </div>

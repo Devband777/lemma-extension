@@ -4,8 +4,10 @@ import logo from '../../assets/img/icon-34.png';
 import dropdown from '../../assets/img/dropdownarrow.png';
 import Partial from '../Partial';
 import TextTitle from '../TextTitle';
-export default function Timeline() {
-  const [isTranscribeExpand, setIsTranscribeExpand] = useState(false);
+export default function Transcribe(props) {
+  const [isTranscribeExpand, setIsTranscribeExpand] = useState(
+    props.clickitem === 'transcribe'
+  );
   const handleClick = () => {
     setIsTranscribeExpand(!isTranscribeExpand);
   };

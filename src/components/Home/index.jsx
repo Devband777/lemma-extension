@@ -7,10 +7,21 @@ import Transcribe from '../Transcribe';
 export default function Home(props) {
   return (
     <div className="home">
-      <InputAnswer inputSentence={props.inputValue} />
-      <Summarize />
-      <Timeline />
-      <Transcribe />
+      <div className="home-subtitle">
+        <InputAnswer
+          inputSentence={props.inputValue}
+          clickitem={props.clickitem}
+        />
+      </div>
+      <div className="home-subtitle">
+        <Summarize clickitem={props.clickitem} />
+      </div>
+      <div className="home-subtitle">
+        <Timeline clickitem={props.clickitem} />
+      </div>
+      <div className="home-subtitle">
+        <Transcribe clickitem={props.clickitem} />
+      </div>
     </div>
   );
 }
