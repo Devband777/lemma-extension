@@ -8,8 +8,8 @@ import logo3 from '../../assets/img/introimage2.png';
 import logo4 from '../../assets/img/introimage3.png';
 import { Link } from 'route-lite';
 import './style.scss';
-export default function Landing(props) {
-  props.callback('Landing');
+export default function Landing() {
+  // props.callback('Landing');
   const [count, setCount] = useState(0);
   const [mousedOver, setMousedOver] = useState(false);
 

@@ -15,9 +15,8 @@ const Popup = () => {
     <div className="App">
       <Header />
       <Router>
-        <Landing callback={handleCallback} />
+        <SignUp />
       </Router>
-      <SignUp />
       <div style={{ height: '70px' }} />
       <Footer page={stateValue} />
     </div>

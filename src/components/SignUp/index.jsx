@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.scss';
+import { Link } from 'route-lite';
+import Landing from '../Landing';
 import CardButton from '../CardButton';
 import logo1 from '../../assets/img/introimage1.png';
 import logo from '../../assets/img/icon-34.png';
@@ -23,31 +25,33 @@ export default function Signup() {
           <div className="signup-header-body-video">
             <img src={logo1} alt="asd" />
             <div className="signup-header-body-video-card1">
-              <CardButton />
+              <CardButton text="Translate" />
             </div>
             <div className="signup-header-body-video-card2">
-              <CardButton />
+              <CardButton text="Transcribe" />
             </div>
             <div className="signup-header-body-video-card3">
-              <CardButton />
+              <CardButton text="Timeline" />
             </div>
             <div className="signup-header-body-video-card4">
-              <CardButton />
+              <CardButton text="Summarize" />
             </div>
             <div className="signup-header-body-video-card5">
-              <CardButton />
+              <CardButton text="Prompt Video" />
             </div>
             <div className="signup-header-body-video-card6">
-              <CardButton />
+              <CardButton text="Add more..." />
             </div>
           </div>
           <div className="signup-header-body-container">
-            <div className="signup-header-body-container-signgoogle">
-              <div className="signup-header-body-container-signgoogle-logo">
-                <img src={logo2} alt="asd" />
+            <Link component={Landing}>
+              <div className="signup-header-body-container-signgoogle">
+                <div className="signup-header-body-container-signgoogle-logo">
+                  <img src={logo2} alt="asd" />
+                </div>
+                Sign up with Google
               </div>
-              Sign up with Google
-            </div>
+            </Link>
             <div className="signup-header-body-container-devider">
               <div className="signup-header-body-container-devider-line" />
               Or

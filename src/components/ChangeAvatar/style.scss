@@ -1,0 +1,20 @@
+.cardbutton {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid #dde1e6;
+  border-radius: 100px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+
+  /* Cyan/60 */
+
+  color: #0072c3;
+}
