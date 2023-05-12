@@ -166,6 +166,16 @@
 
           color: #ffffff;
         }
+        &-generalbutton.hidden {
+          display: none;
+        }
+        &-signupemail {
+          width: 100%;
+          display: none;
+        }
+        &-signupemail.hidden {
+          display: flex;
+        }
         &-footer {
           display: flex;
           flex-direction: row;

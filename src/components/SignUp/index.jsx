@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import { Link } from 'route-lite';
 import Landing from '../Landing';
@@ -8,6 +8,10 @@ import logo1 from '../../assets/img/introimage1.png';
 import logo from '../../assets/img/icon-34.png';
 import logo2 from '../../assets/img/google.png';
 export default function Signup() {
+  const [isFirstClick, setIsFirstClick] = useState(false);
+  const handleClick = () => {
+    setIsFirstClick(true);
+  };
   return (
     <div className="signup">
       <div className="signup-header">
@@ -58,11 +62,21 @@ export default function Signup() {
               Or
               <div className="signup-header-body-container-devider-line" />
             </div>
-            <Link component={EmailSignUp}>
-              <div className="signup-header-body-container-generalbutton">
-                Continue with email
-              </div>
-            </Link>
+            <div
+              className={`signup-header-body-container-generalbutton ${
+                isFirstClick ? 'hidden' : ''
+              }`}
+              onClick={handleClick}
+            >
+              Continue with email
+            </div>
+            <div
+              className={`signup-header-body-container-signupemail ${
+                isFirstClick ? 'hidden' : ''
+              }`}
+            >
+              <EmailSignUp />
+            </div>
             <div className="signup-header-body-container-footer">
               Got Feedback?
               <span>Login</span>

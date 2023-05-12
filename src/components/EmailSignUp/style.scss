@@ -1,243 +1,61 @@
 .emailsignup {
   display: flex;
-  flex-direction: column;
   font-family: 'Roboto';
   font-style: normal;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 24px 0px;
-  gap: 320px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
   isolation: isolate;
-  &-header {
+  &-input {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    &-title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      &-logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        &-image {
-          img {
-            width: 48px;
-            height: 48px;
-          }
-        }
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 36px;
-        color: #262626;
-      }
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 21px;
-      text-align: center;
-
-      color: #525252;
-    }
-    &-body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
-      width: 328px;
-      &-video {
-        width: 328px;
-        height: 204px;
-        position: relative;
-        filter: drop-shadow(0px 3px 8px #e0e0e0);
-        img {
-          border-radius: 4px;
-          width: 328px;
-          height: 204px;
-        }
-        &-card1 {
-          position: absolute;
-          left: -9.5px;
-          top: 45px;
-        }
-        &-card2 {
-          position: absolute;
-          left: -27.5px;
-          top: 91px;
-        }
-        &-card3 {
-          position: absolute;
-          left: -13.5px;
-          top: 137px;
-        }
-        &-card4 {
-          position: absolute;
-          right: -7.5px;
-          top: 45px;
-        }
-        &-card5 {
-          position: absolute;
-          right: -25.5px;
-          top: 91px;
-        }
-        &-card6 {
-          position: absolute;
-          right: -11.5px;
-          top: 137px;
-        }
-      }
-      &-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        width: 100%;
-        &-signgoogle {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          padding: 1px 10px 1px 1px;
-          gap: 10px;
-          background: #ffffff;
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.084),
-            0px 1px 1px rgba(0, 0, 0, 0.168);
-          border-radius: 4px;
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 16px;
-          width: 100%;
-          color: #525252;
-          &-logo {
-            width: 38px;
-            height: 38px;
-
-            background: #ffffff;
-            border-radius: 1px;
-          }
-        }
-        &-devider {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 8px;
-          font-weight: 400;
-          font-size: 11px;
-          line-height: 14px;
-          color: #697077;
-          &-line {
-            width: 166.5px;
-            height: 1px;
-            background: #dde1e6;
-            border-radius: 100px;
-          }
-        }
-        &-emailsignup {
-          width: 100%;
-          display: flex;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 22px;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 0px;
-          isolation: isolate;
-          &-input {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 0px 0px 24px;
-            width: 100%;
-            &-label {
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              padding: 0px 0px 8px;
-              gap: 4px;
-              color: #4d5358;
-              span {
-                text-align: right;
-                color: #fa4d56;
-              }
-            }
-            &-input {
-              border-radius: 4px;
-              width: 100%;
-              input {
-                border: 1px solid #e0e0e0;
-                padding: 8px 12px;
-                width: 100%;
-              }
-            }
-          }
-          &-button {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 9px 24px;
-            gap: 8px;
-            width: 93%;
-            height: 23px;
-            background: #0f62fe;
-            border: 1px solid #78a9ff;
-            box-shadow: 0px 2px 4px rgba(224, 224, 224, 0.3);
-            border-radius: 4px;
-            color: #ffffff;
-            img {
-              width: 16px;
-              height: 16px;
-            }
-          }
-        }
-        &-footer {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          gap: 4px;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 22px;
-          color: #4d5358;
-          span {
-            color: #0043ce;
-          }
-        }
-      }
-    }
-  }
-  &-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    &-feedback {
+    align-items: flex-start;
+    padding: 0px 0px 24px;
+    &-label {
+      width: 100%;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      padding: 0px 0px 8px;
       gap: 4px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      /* identical to box height, or 157% */
-
-      /* Cool Gray/70 */
-
       color: #4d5358;
       span {
-        color: #0043ce;
+        text-align: right;
+        color: #fa4d56;
       }
     }
-    &-version {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      color: #a2a9b0;
+    &-input {
+      width: 100%;
+      border-radius: 4px;
+      input {
+        padding: 8px 12px;
+        width: 100%;
+        border: 1px solid #78a9ff;
+      }
+    }
+  }
+  &-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 24px;
+    gap: 8px;
+    width: 93%;
+    height: 20px;
+    background: #0f62fe;
+    border: 1px solid #78a9ff;
+    box-shadow: 0px 2px 4px rgba(224, 224, 224, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+    img {
+      width: 16px;
+      height: 16px;
     }
   }
 }
