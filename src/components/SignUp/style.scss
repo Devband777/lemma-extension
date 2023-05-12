@@ -176,6 +176,13 @@
         &-signupemail.hidden {
           display: flex;
         }
+        &-login {
+          width: 100%;
+          display: none;
+        }
+        &-login.hidden {
+          display: flex;
+        }
         &-footer {
           display: flex;
           flex-direction: row;

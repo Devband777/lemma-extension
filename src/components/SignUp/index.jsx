@@ -3,14 +3,19 @@ import './style.scss';
 import { Link } from 'route-lite';
 import Landing from '../Landing';
 import EmailSignUp from '../EmailSignUp';
+import LogIn from '../LogIn';
 import CardButton from '../CardButton';
 import logo1 from '../../assets/img/introimage1.png';
 import logo from '../../assets/img/icon-34.png';
 import logo2 from '../../assets/img/google.png';
 export default function Signup() {
   const [isFirstClick, setIsFirstClick] = useState(false);
-  const handleClick = () => {
+  const [isLogIn, setIsLogIn] = useState(false);
+  const emailsignup = () => {
     setIsFirstClick(true);
+  };
+  const loginClick = () => {
+    setIsLogIn(true);
   };
   return (
     <div className="signup">
@@ -64,9 +69,9 @@ export default function Signup() {
             </div>
             <div
               className={`signup-header-body-container-generalbutton ${
-                isFirstClick ? 'hidden' : ''
+                (isFirstClick ? 'hidden' : '', isLogIn ? 'hidden' : '')
               }`}
-              onClick={handleClick}
+              onClick={emailsignup}
             >
               Continue with email
             </div>
@@ -77,16 +82,23 @@ export default function Signup() {
             >
               <EmailSignUp />
             </div>
+            <div
+              className={`signup-header-body-container-login ${
+                isLogIn ? 'hidden' : ''
+              }`}
+            >
+              <LogIn />
+            </div>
             <div className="signup-header-body-container-footer">
-              Got Feedback?
-              <span>Login</span>
+              Have an account?
+              <span onClick={loginClick}>Login</span>
             </div>
           </div>
         </div>
       </div>
       <div className="signup-footer">
         <div className="signup-footer-feedback">
-          Have an account?
+          Got Feedback?
           <span>Contact Lemma support</span>
         </div>
         <div className="signup-footer-version">Version: #.#.#</div>
