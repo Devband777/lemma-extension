@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import { Link } from 'route-lite';
 import Landing from '../Landing';
+import EmailSignUp from '../EmailSignUp';
 import CardButton from '../CardButton';
 import logo1 from '../../assets/img/introimage1.png';
 import logo from '../../assets/img/icon-34.png';
@@ -57,9 +58,11 @@ export default function Signup() {
               Or
               <div className="signup-header-body-container-devider-line" />
             </div>
-            <div className="signup-header-body-container-generalbutton">
-              Continue with email
-            </div>
+            <Link component={EmailSignUp}>
+              <div className="signup-header-body-container-generalbutton">
+                Continue with email
+              </div>
+            </Link>
             <div className="signup-header-body-container-footer">
               Got Feedback?
               <span>Login</span>
