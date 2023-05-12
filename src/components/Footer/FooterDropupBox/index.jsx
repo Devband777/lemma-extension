@@ -1,12 +1,22 @@
 import React from 'react';
 import './style.scss';
-import Home from '../../Home';
 import logo from '../../../assets/img/single.png';
 import clock from '../../../assets/img/clock.png';
 import gear from '../../../assets/img/gear.png';
 import { Link } from 'route-lite';
+import Home from '../../Home';
+import SignUp from '../../SignUp';
+import ChangeAvatar from '../../ChangeAvatar';
 import DropupBoxItem from './DropupBoxItem';
-export default function FooterDropupBox() {
+export default function FooterDropupBox(props) {
+  const handleClick = () => {
+    // Call the callback function with some data
+    props.callback('change');
+  };
+  const otherClick = () => {
+    // Call the callback function with some data
+    props.callback('');
+  };
   const frequencyitems = [
     {
       id: 1,
@@ -58,7 +68,10 @@ export default function FooterDropupBox() {
           </div>
         </div>
         <div className="footerdropupbox-frequencyaction-container">
-          <Link component={() => <Home clickitem="summarize" />}>
+          <Link
+            component={() => <Home clickitem="summarize" />}
+            onClick={otherClick}
+          >
             <DropupBoxItem
               url={frequencyitems[0].url}
               hoverstatus={frequencyitems[0].hoverstatus}
@@ -66,13 +79,19 @@ export default function FooterDropupBox() {
               description={frequencyitems[0].description}
             />
           </Link>
-          <Link component={() => <Home clickitem="timeline" />}>
+          <Link
+            component={() => <Home clickitem="timeline" />}
+            onClick={otherClick}
+          >
             <DropupBoxItem
               url={frequencyitems[1].url}
               description={frequencyitems[1].description}
             />
           </Link>
-          <Link component={() => <Home clickitem="transcribe" />}>
+          <Link
+            component={() => <Home clickitem="transcribe" />}
+            onClick={otherClick}
+          >
             <DropupBoxItem
               url={frequencyitems[2].url}
               hoverstatus={frequencyitems[2].hoverstatus}
@@ -80,7 +99,7 @@ export default function FooterDropupBox() {
               description={frequencyitems[2].description}
             />
           </Link>
-          <Link component={Home}>
+          <Link component={Home} onClick={otherClick}>
             <DropupBoxItem
               url={frequencyitems[3].url}
               hoverstatus={frequencyitems[3].hoverstatus}
@@ -102,12 +121,18 @@ export default function FooterDropupBox() {
           </div>
         </div>
         <div className="footerdropupbox-frequencyaction-container">
-          {profileitems.map((profileitem) => (
+          <Link component={ChangeAvatar} onClick={handleClick}>
             <DropupBoxItem
-              url={profileitem.url}
-              description={profileitem.description}
+              url={profileitems[0].url}
+              description={profileitems[0].description}
             />
-          ))}
+          </Link>
+          <Link component={SignUp} onClick={otherClick}>
+            <DropupBoxItem
+              url={profileitems[1].url}
+              description={profileitems[1].description}
+            />
+          </Link>
         </div>
       </div>
     </div>

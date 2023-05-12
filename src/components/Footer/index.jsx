@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import logo1 from '../../assets/img/single.png';
 import logo2 from '../../assets/img/inputenter.png';
+import logo3 from '../../assets/img/icon.png';
+import logo4 from '../../assets/img/close.png';
+import logo5 from '../../assets/img/check.png';
 import FooterDropupBox from './FooterDropupBox';
 import Home from '../Home';
 import { Link } from 'route-lite';
@@ -17,6 +20,10 @@ export default function Footer(props) {
   //     setDisabled(true);
   //   }
   // }, [props.page]);
+  const [stateValue, setStateValue] = useState('');
+  const handleCallback = (childData) => {
+    setStateValue(childData);
+  };
 
   const handleClick = () => {
     setIsExpanded(!isExpanded);
@@ -38,7 +45,7 @@ export default function Footer(props) {
   }, []);
 
   return (
-    <div className="footer">
+    <div className={`footer ${stateValue === 'change' ? 'changeavatar' : ''}`}>
       <div className="footer-container">
         <div className="footer-container-single" onClick={handleClick}>
           <img src={logo1} alt="logo" />
@@ -51,6 +58,18 @@ export default function Footer(props) {
             placeholder="Ask me anything about this video.... "
           />
         </div>
+        <div className="footer-container-avatar">
+          <img
+            src={logo3}
+            alt="logo"
+            className="footer-container-avatar-image"
+          />
+          <div className="footer-container-avatar-container">
+            Add image
+            <br />
+            <span>or drag and drop</span>
+          </div>
+        </div>
       </div>
       <Link
         component={() => <Home inputValue={inputValue} clickitem="collase" />}
@@ -59,11 +78,16 @@ export default function Footer(props) {
           <img src={logo2} alt="logo" />
         </div>
       </Link>
+      <div className="footer-inputicongroup">
+        <img src={logo4} alt="logo" />
+        <div className="footer-inputicongroup-devider" />
+        <img src={logo5} alt="logo" />
+      </div>
       <div
         className={`box ${isExpanded ? 'hidden' : ''}`}
         onClick={handleClick}
       >
-        <FooterDropupBox />
+        <FooterDropupBox callback={handleCallback} />
       </div>
     </div>
   );

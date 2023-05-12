@@ -1,5 +1,5 @@
 import React from 'react';
-import logo2 from '../../../../../assets/img/dropdownarrow.png';
+import logo2 from '../../../../../assets/img/check.png';
 import './style.scss';
 export default function FontOne(props) {
   let className = 'fontone';

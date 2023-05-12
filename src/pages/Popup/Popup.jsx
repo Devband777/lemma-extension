@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Router from 'route-lite';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Landing from '../../components/Landing';
 import SignUp from '../../components/SignUp';
 import './Popup.scss';
 
