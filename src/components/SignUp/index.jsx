@@ -69,7 +69,7 @@ export default function Signup() {
             </div>
             <div
               className={`signup-header-body-container-generalbutton ${
-                (isFirstClick ? 'hidden' : '', isLogIn ? 'hidden' : '')
+                isFirstClick ? 'hidden' : ''
               }`}
               onClick={emailsignup}
             >
