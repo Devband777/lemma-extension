@@ -67,14 +67,14 @@ export default function Signup() {
                 </div>
                 <span
                   className={`signup-header-body-container-signgoogle-signup ${
-                    isLogIn ? 'hidden' : ''
+                    isLogIn ? 'hiden' : ''
                   }`}
                 >
                   Sign up with Google
                 </span>
                 <span
                   className={`signup-header-body-container-signgoogle-login ${
-                    isLogIn ? 'hidden' : ''
+                    isLogIn ? 'hiden' : ''
                   }`}
                 >
                   Log in with Google
@@ -88,8 +88,8 @@ export default function Signup() {
             </div>
             <div
               className={`signup-header-body-container-generalbutton ${
-                isFirstClick ? 'hidden' : ''
-              } ${isLogIn ? 'hidden' : ''}
+                isFirstClick ? 'hiden' : ''
+              } ${isLogIn ? 'hiden' : ''}
               `}
               onClick={emailsignup}
             >
@@ -97,31 +97,31 @@ export default function Signup() {
             </div>
             <div
               className={`signup-header-body-container-signupemail ${
-                isFirstClick ? 'hidden' : ''
+                isFirstClick ? 'hiden' : ''
               }`}
             >
               <EmailSignUp />
             </div>
             <div
               className={`signup-header-body-container-login ${
-                isLogIn ? 'hidden' : ''
+                isLogIn ? 'hiden' : ''
               }${
-                passwordRecoveryButton === 'passwordrecovery' ? 'hidden2' : ''
+                passwordRecoveryButton === 'passwordrecovery' ? 'hiden2' : ''
               }`}
             >
               <LogIn callback={passwordRecoveryButtonClick} />
             </div>
             <div
               className={`signup-header-body-container-passwordrecovery ${
-                passwordRecoveryButton === 'passwordrecovery' ? 'hidden' : ''
+                passwordRecoveryButton === 'passwordrecovery' ? 'hiden' : ''
               }`}
             >
               <PasswordRecovery />
             </div>
             <div
               className={`signup-header-body-container-footer ${
-                isLogIn ? 'hidden' : ''
-              }${isFirstClick ? 'hidden' : ''}`}
+                isLogIn ? 'hiden' : ''
+              }${isFirstClick ? 'hiden' : ''}`}
             >
               Have an account?
               <span onClick={loginClick}>Login</span>

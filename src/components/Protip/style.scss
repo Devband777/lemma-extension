@@ -33,21 +33,23 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 22px;
-
     align-self: stretch;
-    a {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 22px;
-      color: #697077;
-      div {
-        color: #0072c3;
-      }
+    line-height: 22px;
+    color: #697077;
+    &-link {
+      color: #0072c3;
     }
+
     span {
       font-weight: 400;
       color: #697077;
     }
+  }
+  &-body {
+    position: absolute;
+    top: 88px;
+    width: 90%;
+    display: none;
   }
 }
 .hidden {

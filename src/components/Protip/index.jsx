@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
-import Home from '../Home';
 import './style.scss';
 import info from '../../assets/img/info.png';
-import { Link } from 'route-lite';
+import Home from '../Home';
 export default function Protip() {
+  const [isDismiss, setIsDismiss] = useState(false);
+  const dismissClick = () => {
+    setIsDismiss(true);
+  };
   return (
-    <div className="protip">
+    <div className={`protip ${isDismiss ? 'hiden' : ''}`}>
       <div className="protip-header">
         PRO TIP
         <img src={info} alt="logo" />
       </div>
       <div className="protip-container">
-        <Link component={Home}>
-          Click or type / to select frequently used actions.
-          <div className="protip-container-link">Dismiss</div>
-        </Link>
+        Click or type / to select frequently used actions.
+        <div className="protip-container-link" onClick={dismissClick}>
+          Dismiss
+        </div>
         <span>Ex: /show video timeline</span>
+      </div>
+      <div className="protip-body">
+        <Home />
       </div>
     </div>
   );

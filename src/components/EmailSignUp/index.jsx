@@ -3,14 +3,14 @@ import { Link } from 'route-lite';
 import logo from '../../assets/img/skipimage.png';
 import Landing from '../Landing';
 import './style.scss';
-export default function EmailSignUp(props) {
+export default function EmailSignUp() {
   const [isSecondClick, setIsSecondClick] = useState(false);
   const handleClick = () => {
     setIsSecondClick(true);
   };
   return (
     <div className="emailsignup">
-      <div className={`emailsignup-input ${isSecondClick ? 'hidden' : ''}`}>
+      <div className={`emailsignup-input ${isSecondClick ? 'hiden' : ''}`}>
         <div className="emailsignup-input-label">
           <span>*</span>Email
         </div>
@@ -18,7 +18,7 @@ export default function EmailSignUp(props) {
           <input placeholder="ex: hello@gmail.com" type="email" />
         </div>
       </div>
-      <div className={`emailsignup-input ${isSecondClick ? '' : 'hidden'}`}>
+      <div className={`emailsignup-input ${isSecondClick ? '' : 'hiden'}`}>
         <div className="emailsignup-input-label">
           <span>*</span>Username
         </div>
@@ -26,7 +26,7 @@ export default function EmailSignUp(props) {
           <input placeholder="ex: something unique" type="text" />
         </div>
       </div>
-      <div className={`emailsignup-input ${isSecondClick ? '' : 'hidden'}`}>
+      <div className={`emailsignup-input ${isSecondClick ? '' : 'hiden'}`}>
         <div className="emailsignup-input-label">
           <span>*</span>Password
         </div>
@@ -35,13 +35,13 @@ export default function EmailSignUp(props) {
         </div>
       </div>
       <div
-        className={`emailsignup-button ${isSecondClick ? 'hidden' : ''}`}
+        className={`emailsignup-button ${isSecondClick ? 'hiden' : ''}`}
         onClick={handleClick}
       >
         Continue
         <img src={logo} alt="logo" />
       </div>
-      <div className={`emailsignup-button ${isSecondClick ? '' : 'hidden'}`}>
+      <div className={`emailsignup-button ${isSecondClick ? '' : 'hiden'}`}>
         <Link component={Landing}>Continue</Link>
         <img src={logo} alt="logo" />
       </div>

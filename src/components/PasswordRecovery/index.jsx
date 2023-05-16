@@ -10,9 +10,7 @@ export default function PasswordRecovery(props) {
   };
   return (
     <div className="passwordrecovery">
-      <div
-        className={`passwordrecovery-input ${isSecondClick ? 'hidden' : ''}`}
-      >
+      <div className={`passwordrecovery-input ${isSecondClick ? 'hiden' : ''}`}>
         <div className="passwordrecovery-input-label">
           <span>*</span>Email
         </div>
@@ -20,36 +18,32 @@ export default function PasswordRecovery(props) {
           <input placeholder="ex: hello@gmail.com" type="email" />
         </div>
       </div>
-      <div
-        className={`passwordrecovery-input ${isSecondClick ? '' : 'hidden'}`}
-      >
+      <div className={`passwordrecovery-input ${isSecondClick ? '' : 'hiden'}`}>
         <div className="passwordrecovery-input-label">
           <span>*</span>Temporary password
         </div>
         <div className="passwordrecovery-input-input">
-          <input placeholder="ex: 123456" type="text" />
+          <input placeholder="ex: 123456" type="text" required />
         </div>
       </div>
-      <div
-        className={`passwordrecovery-input ${isSecondClick ? '' : 'hidden'}`}
-      >
+      <div className={`passwordrecovery-input ${isSecondClick ? '' : 'hiden'}`}>
         <div className="passwordrecovery-input-label">
           <span>*</span>New Password
         </div>
         <div className="passwordrecovery-input-input">
-          <input placeholder="enter new password" type="password" />
+          <input placeholder="enter new password" type="password" required />
           Please enter a new password for your account.
         </div>
       </div>
       <div
-        className={`passwordrecovery-button ${isSecondClick ? 'hidden' : ''}`}
+        className={`passwordrecovery-button ${isSecondClick ? 'hiden' : ''}`}
         onClick={handleClick}
       >
         Send reset link
         <img src={logo} alt="logo" />
       </div>
       <div
-        className={`passwordrecovery-button ${isSecondClick ? '' : 'hidden'}`}
+        className={`passwordrecovery-button ${isSecondClick ? '' : 'hiden'}`}
       >
         <Link component={Landing}>Log in</Link>
       </div>

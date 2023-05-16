@@ -126,7 +126,7 @@
           &-login {
             display: none;
           }
-          &-login.hidden {
+          &-login.hiden {
             display: flex;
           }
         }
@@ -175,28 +175,28 @@
 
           color: #ffffff;
         }
-        &-generalbutton.hidden {
+        &-generalbutton.hiden {
           display: none;
         }
         &-signupemail {
           width: 100%;
           display: none;
         }
-        &-signupemail.hidden {
+        &-signupemail.hiden {
           display: flex;
         }
         &-login {
           width: 100%;
           display: none;
         }
-        &-login.hidden {
+        &-login.hiden {
           display: flex;
         }
         &-passwordrecovery {
           width: 100%;
           display: none;
         }
-        &-passwordrecovery.hidden {
+        &-passwordrecovery.hiden {
           display: flex;
         }
         &-footer {
