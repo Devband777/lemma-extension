@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'route-lite';
 import Landing from '../Landing';
 import './style.scss';
-export default function LogIn() {
+export default function LogIn(props) {
+  const sendData = () => {
+    props.callback('passwordrecovery');
+  };
   return (
     <div className="login">
       <div className="login-input">
@@ -24,7 +27,9 @@ export default function LogIn() {
       <div className="login-button">
         <Link component={Landing}>Log In</Link>
       </div>
-      <div className="login-link">Forgot Password?</div>
+      <div className="login-link" onClick={sendData}>
+        Forgot Password?
+      </div>
     </div>
   );
 }

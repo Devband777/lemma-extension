@@ -3,6 +3,7 @@ import './style.scss';
 import { Link } from 'route-lite';
 import Landing from '../Landing';
 import EmailSignUp from '../EmailSignUp';
+import PasswordRecovery from '../PasswordRecovery';
 import LogIn from '../LogIn';
 import CardButton from '../CardButton';
 import logo1 from '../../assets/img/introimage1.png';
@@ -16,6 +17,11 @@ export default function Signup() {
   };
   const loginClick = () => {
     setIsLogIn(true);
+  };
+  const [passwordRecoveryButton, setPasswordRecoveryButton] = useState('');
+
+  const passwordRecoveryButtonClick = (passwordRecoveryButton) => {
+    setPasswordRecoveryButton(passwordRecoveryButton);
   };
   return (
     <div className="signup">
@@ -59,7 +65,20 @@ export default function Signup() {
                 <div className="signup-header-body-container-signgoogle-logo">
                   <img src={logo2} alt="asd" />
                 </div>
-                Sign up with Google
+                <span
+                  className={`signup-header-body-container-signgoogle-signup ${
+                    isLogIn ? 'hidden' : ''
+                  }`}
+                >
+                  Sign up with Google
+                </span>
+                <span
+                  className={`signup-header-body-container-signgoogle-login ${
+                    isLogIn ? 'hidden' : ''
+                  }`}
+                >
+                  Log in with Google
+                </span>
               </div>
             </Link>
             <div className="signup-header-body-container-devider">
@@ -70,7 +89,8 @@ export default function Signup() {
             <div
               className={`signup-header-body-container-generalbutton ${
                 isFirstClick ? 'hidden' : ''
-              }`}
+              } ${isLogIn ? 'hidden' : ''}
+              `}
               onClick={emailsignup}
             >
               Continue with email
@@ -85,11 +105,24 @@ export default function Signup() {
             <div
               className={`signup-header-body-container-login ${
                 isLogIn ? 'hidden' : ''
+              }${
+                passwordRecoveryButton === 'passwordrecovery' ? 'hidden2' : ''
               }`}
             >
-              <LogIn />
+              <LogIn callback={passwordRecoveryButtonClick} />
             </div>
-            <div className="signup-header-body-container-footer">
+            <div
+              className={`signup-header-body-container-passwordrecovery ${
+                passwordRecoveryButton === 'passwordrecovery' ? 'hidden' : ''
+              }`}
+            >
+              <PasswordRecovery />
+            </div>
+            <div
+              className={`signup-header-body-container-footer ${
+                isLogIn ? 'hidden' : ''
+              }${isFirstClick ? 'hidden' : ''}`}
+            >
               Have an account?
               <span onClick={loginClick}>Login</span>
             </div>

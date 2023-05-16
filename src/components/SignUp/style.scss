@@ -120,6 +120,15 @@
             background: #ffffff;
             border-radius: 1px;
           }
+          &-signup {
+            display: flex;
+          }
+          &-login {
+            display: none;
+          }
+          &-login.hidden {
+            display: flex;
+          }
         }
         &-devider {
           display: flex;
@@ -181,6 +190,13 @@
           display: none;
         }
         &-login.hidden {
+          display: flex;
+        }
+        &-passwordrecovery {
+          width: 100%;
+          display: none;
+        }
+        &-passwordrecovery.hidden {
           display: flex;
         }
         &-footer {

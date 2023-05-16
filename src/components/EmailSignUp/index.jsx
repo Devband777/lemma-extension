@@ -3,7 +3,7 @@ import { Link } from 'route-lite';
 import logo from '../../assets/img/skipimage.png';
 import Landing from '../Landing';
 import './style.scss';
-export default function EmailSignUp() {
+export default function EmailSignUp(props) {
   const [isSecondClick, setIsSecondClick] = useState(false);
   const handleClick = () => {
     setIsSecondClick(true);
