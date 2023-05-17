@@ -28,6 +28,9 @@ export default function Signup(props) {
   const landingVisit = () => {
     props.callback('');
   };
+  const handleCallback = (childData) => {
+    props.callback(childData);
+  };
   useEffect(() => {
     signupVisit();
   }, []);
@@ -112,7 +115,7 @@ export default function Signup(props) {
                 isFirstClick ? 'hiden' : ''
               }`}
             >
-              <EmailSignUp />
+              <EmailSignUp callback={handleCallback} />
             </div>
             <div
               className={`signup-header-body-container-login ${
@@ -128,7 +131,7 @@ export default function Signup(props) {
                 passwordRecoveryButton === 'passwordrecovery' ? 'hiden' : ''
               }`}
             >
-              <PasswordRecovery />
+              <PasswordRecovery callback={handleCallback} />
             </div>
             <div
               className={`signup-header-body-container-footer ${

@@ -129,7 +129,7 @@ export default function FooterDropupBox(props) {
               description={profileitems[0].description}
             />
           </Link>
-          <Link component={SignUp} onClick={otherClick}>
+          <Link component={SignUp}>
             <DropupBoxItem
               url={profileitems[1].url}
               description={profileitems[1].description}

@@ -8,6 +8,9 @@ export default function PasswordRecovery(props) {
   const handleClick = () => {
     setIsSecondClick(true);
   };
+  const signupWithEmail = () => {
+    props.callback('');
+  };
   return (
     <div className="passwordrecovery">
       <div className={`passwordrecovery-input ${isSecondClick ? 'hiden' : ''}`}>
@@ -45,7 +48,9 @@ export default function PasswordRecovery(props) {
       <div
         className={`passwordrecovery-button ${isSecondClick ? '' : 'hiden'}`}
       >
-        <Link component={Landing}>Log in</Link>
+        <Link component={Landing} onClick={signupWithEmail}>
+          Log in
+        </Link>
       </div>
     </div>
   );

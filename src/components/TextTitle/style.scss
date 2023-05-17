@@ -8,23 +8,23 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 8.7px;
+    line-height: 13.8px;
     img {
-      width: 24px;
-      height: 24px;
+      width: 15px;
+      height: 15px;
     }
   }
   &-rating {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4px;
+    gap: 2.5px;
     img {
-      width: 18;
-      height: 18px;
+      width: 11px;
+      height: 11px;
     }
   }
 }

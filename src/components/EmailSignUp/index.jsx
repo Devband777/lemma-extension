@@ -3,10 +3,13 @@ import { Link } from 'route-lite';
 import logo from '../../assets/img/skipimage.png';
 import Landing from '../Landing';
 import './style.scss';
-export default function EmailSignUp() {
+export default function EmailSignUp(props) {
   const [isSecondClick, setIsSecondClick] = useState(false);
   const handleClick = () => {
     setIsSecondClick(true);
+  };
+  const signupWithEmail = () => {
+    props.callback('');
   };
   return (
     <div className="emailsignup">
@@ -42,7 +45,9 @@ export default function EmailSignUp() {
         <img src={logo} alt="logo" />
       </div>
       <div className={`emailsignup-button ${isSecondClick ? '' : 'hiden'}`}>
-        <Link component={Landing}>Continue</Link>
+        <Link component={Landing} onClick={signupWithEmail}>
+          Continue
+        </Link>
         <img src={logo} alt="logo" />
       </div>
     </div>

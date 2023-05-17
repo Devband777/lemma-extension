@@ -1,11 +1,11 @@
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 20px 15px;
   gap: 20px;
-  height: 560px;
+  min-height: 560px;
   position: relative;
   &-header {
     width: 100%;

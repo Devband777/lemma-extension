@@ -13,17 +13,13 @@ const Popup = () => {
   console.log(stateValue);
   return (
     <div className="App">
-      <div className={`App-header ${stateValue ? 'hien' : ''}`}>
+      <div className={`App-header ${stateValue === 'visit' ? 'hiden' : ''}`}>
         <Header />
       </div>
       <Router>
         <SignUp callback={handleCallback} />
       </Router>
-      <div
-        style={{ height: '70px' }}
-        className={` ${stateValue ? 'hien' : ''}`}
-      />
-      <div className={`App-footer ${stateValue ? 'hien' : ''}`}>
+      <div className={`App-footer ${stateValue === 'visit' ? 'hiden' : ''}`}>
         <Footer />
       </div>
     </div>

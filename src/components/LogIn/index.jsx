@@ -6,6 +6,9 @@ export default function LogIn(props) {
   const sendData = () => {
     props.callback('passwordrecovery');
   };
+  const signupWithEmail = () => {
+    props.callback('');
+  };
   return (
     <div className="login">
       <div className="login-input">
@@ -25,7 +28,9 @@ export default function LogIn(props) {
         </div>
       </div>
       <div className="login-button">
-        <Link component={Landing}>Log In</Link>
+        <Link component={Landing} onClick={signupWithEmail}>
+          Log In
+        </Link>
       </div>
       <div className="login-link" onClick={sendData}>
         Forgot Password?
