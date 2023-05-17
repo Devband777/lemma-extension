@@ -1,16 +1,16 @@
 .footerdropupbox {
   box-sizing: border-box;
   display: flex;
-  height: 460px;
+  height: 270px;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
-  gap: 16px;
+  padding: 7.5px;
+  gap: 10px;
   background: #ffffff;
   border: 1px solid #dde1e6;
-  box-shadow: 0px 3px 8px #e0e0e0;
-  border-radius: 4px;
+  box-shadow: 0px 2px 5px #e0e0e0;
+  border-radius: 2.5px;
   z-index: 11;
   justify-content: space-between;
   &-frequencyaction {
@@ -18,20 +18,20 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 2px;
+    gap: 1px;
     &-title {
       display: flex;
       flex-direction: row;
       width: 100%;
-      gap: 8px;
+      gap: 5px;
       align-items: flex-start;
       justify-content: space-between;
       &-icon {
-        padding: 4px;
-        width: 16px;
-        height: 16px;
+        padding: 2.5px;
+        width: 10px;
+        height: 10px;
         background: #dde1e6;
-        border-radius: 4px;
+        border-radius: 2.5px;
       }
       &-row {
         display: flex;
@@ -41,13 +41,13 @@
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 600;
-        font-size: 11px;
-        line-height: 14px;
+        font-size: 7px;
+        line-height: 9px;
         color: #697077;
         justify-content: space-between;
         img {
-          width: 18px;
-          height: 18px;
+          width: 11px;
+          height: 11px;
         }
       }
     }
@@ -66,18 +66,18 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 2px;
+    gap: 1px;
     &-title {
       display: flex;
       flex-direction: row;
       width: 100%;
-      gap: 8px;
+      gap: 5px;
       align-items: flex-start;
       justify-content: space-between;
       &-icon {
-        padding: 4px;
-        width: 24px;
-        height: 24px;
+        padding: 2.5px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
       }
       &-row {
@@ -88,13 +88,13 @@
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 600;
-        font-size: 11px;
-        line-height: 14px;
+        font-size: 7px;
+        line-height: 9px;
         color: #697077;
         justify-content: space-between;
         img {
-          width: 18px;
-          height: 18px;
+          width: 11px;
+          height: 11px;
         }
       }
     }

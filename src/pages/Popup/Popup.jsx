@@ -10,14 +10,22 @@ const Popup = () => {
   const handleCallback = (childData) => {
     setStateValue(childData);
   };
+  console.log(stateValue);
   return (
     <div className="App">
-      <Header />
+      <div className={`App-header ${stateValue ? 'hien' : ''}`}>
+        <Header />
+      </div>
       <Router>
-        <SignUp />
+        <SignUp callback={handleCallback} />
       </Router>
-      <div style={{ height: '70px' }} />
-      <Footer page={stateValue} />
+      <div
+        style={{ height: '70px' }}
+        className={` ${stateValue ? 'hien' : ''}`}
+      />
+      <div className={`App-footer ${stateValue ? 'hien' : ''}`}>
+        <Footer />
+      </div>
     </div>
   );
 };

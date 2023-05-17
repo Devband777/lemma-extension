@@ -4,28 +4,28 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 8px 16px;
-  gap: 16px;
+  padding: 5px 10px;
+  gap: 10px;
   width: 89%;
   height: auto;
   background: #ffffff;
   border: 1px solid #dde1e6;
-  border-radius: 4px;
+  border-radius: 2.5px;
   justify-content: space-between;
-  bottom: 20px;
+  bottom: 12.5px;
   &-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     height: auto;
     &-single {
-      padding: 4px;
+      padding: 2.5px;
       border: 1px solid #dde1e6;
-      border-radius: 4px;
+      border-radius: 2.5px;
       img {
-        width: 16px;
-        height: 16px;
+        width: 10px;
+        height: 10px;
       }
       &:active {
         background: #dde1e6;
@@ -35,7 +35,7 @@
       input {
         border: none;
         width: 120%;
-        max-height: 200px;
+        max-height: 125px;
         &:focus-visible {
           outline: none;
         }
@@ -45,50 +45,50 @@
       display: none;
       flex-direction: column;
       align-items: center;
-      padding: 8px 0px;
-      gap: 8px;
-      width: 200px;
+      padding: 5px 0px;
+      gap: 5px;
+      width: 125px;
       background: #f2f4f8;
-      border-radius: 4px;
+      border-radius: 2.5px;
       &-image {
-        width: 20px;
-        height: 20px;
+        width: 12.5px;
+        height: 12.5px;
       }
       &-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 8.7px;
+        line-height: 13.8px;
         text-align: center;
 
         color: #4d5358;
         span {
-          font-size: 11px;
-          line-height: 14px;
+          font-size: 7px;
+          line-height: 9px;
         }
       }
     }
   }
   &-inputicon {
     img {
-      width: 20px;
-      height: 20px;
+      width: 12.5px;
+      height: 12.5px;
     }
   }
   &-inputicongroup {
     display: none;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 7.5px;
     img {
-      width: 20px;
-      height: 20px;
+      width: 12.5px;
+      height: 12.5px;
     }
     &-devider {
       width: 1px;
-      height: 16px;
+      height: 10px;
 
       background: #c6c6c6;
       border-radius: 1px;
@@ -98,7 +98,7 @@
     display: none;
     position: absolute;
     left: 0px;
-    bottom: 45px;
+    bottom: 28.66px;
     width: 100%;
   }
   .box.hidden {
@@ -125,14 +125,14 @@ textarea {
   resize: none;
   width: 160%;
   overflow: hidden;
-  min-height: 15px;
-  max-height: 80px;
+  min-height: 10px;
+  max-height: 50px;
   border: none;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 8.7px;
+  line-height: 13.8px;
   &:focus-visible {
     outline: none;
   }

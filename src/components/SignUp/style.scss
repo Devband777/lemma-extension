@@ -5,117 +5,113 @@
   font-style: normal;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 24px 0px;
-  gap: 320px;
+  padding: 15px 15px 0px 15px;
+  height: 560px;
   isolation: isolate;
   &-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 25px;
     &-title {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
+      gap: 10px;
       &-logo {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 5px;
         &-image {
           img {
-            width: 48px;
-            height: 48px;
+            width: 30px;
+            height: 30px;
           }
         }
         font-weight: 700;
-        font-size: 28px;
-        line-height: 36px;
+        font-size: 17.5px;
+        line-height: 20px;
         color: #262626;
       }
       font-weight: 400;
-      font-size: 16px;
-      line-height: 21px;
+      font-size: 10px;
+      line-height: 13.3px;
       text-align: center;
-
       color: #525252;
     }
     &-body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 40px;
-      width: 328px;
+      gap: 27px;
       &-video {
-        width: 328px;
-        height: 204px;
         position: relative;
         filter: drop-shadow(0px 3px 8px #e0e0e0);
         img {
-          border-radius: 4px;
-          width: 328px;
-          height: 204px;
+          border-radius: 2.5px;
+          width: 230px;
+          height: 130px;
         }
         &-card1 {
           position: absolute;
-          left: -9.5px;
-          top: 45px;
+          left: -6px;
+          top: 30px;
         }
         &-card2 {
           position: absolute;
-          left: -27.5px;
-          top: 91px;
+          left: -17px;
+          top: 56px;
         }
         &-card3 {
           position: absolute;
-          left: -13.5px;
-          top: 137px;
+          left: -6px;
+          top: 85px;
         }
         &-card4 {
           position: absolute;
-          right: -7.5px;
-          top: 45px;
+          right: -6px;
+          top: 30px;
         }
         &-card5 {
           position: absolute;
-          right: -25.5px;
-          top: 91px;
+          right: -17px;
+          top: 56px;
         }
         &-card6 {
           position: absolute;
-          right: -11.5px;
-          top: 137px;
+          right: -6px;
+          top: 85px;
         }
       }
       &-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        gap: 6.3px;
         width: 100%;
         &-signgoogle {
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          padding: 1px 10px 1px 1px;
-          gap: 10px;
+          gap: 6.3px;
           background: #ffffff;
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.084),
             0px 1px 1px rgba(0, 0, 0, 0.168);
-          border-radius: 4px;
+          border-radius: 2.5px;
           font-family: 'Roboto';
           font-style: normal;
           font-weight: 400;
-          font-size: 14px;
-          line-height: 16px;
+          font-size: 8.75px;
+          line-height: 6.25px;
           width: 100%;
+          height: 30px;
           color: #525252;
           &-logo {
-            width: 38px;
-            height: 38px;
+            width: 21px;
+            height: 21px;
 
             background: #ffffff;
             border-radius: 1px;
@@ -134,13 +130,13 @@
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 8px;
+          gap: 5px;
           font-weight: 400;
-          font-size: 11px;
-          line-height: 14px;
+          font-size: 6.8px;
+          line-height: 8.7px;
           color: #697077;
           &-line {
-            width: 166.5px;
+            width: 110px;
             height: 1px;
             background: #dde1e6;
             border-radius: 100px;
@@ -151,28 +147,17 @@
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          padding: 9px 24px;
+          margin: 6px 9px;
 
-          width: 328px;
-          height: 40px;
-
-          /* Blue/60 */
-
+          width: 100%;
+          height: 20px;
           background: #0f62fe;
-          /* Blue/40 */
-
           border: 1px solid #78a9ff;
-          /* Dropshadow/Button */
-
           box-shadow: 0px 2px 4px rgba(224, 224, 224, 0.3);
           border-radius: 4px;
           font-weight: 400;
-          font-size: 14px;
-          line-height: 22px;
-          /* identical to box height, or 157% */
-
-          /* White */
-
+          font-size: 8.7px;
+          line-height: 13.8px;
           color: #ffffff;
         }
         &-generalbutton.hiden {
@@ -203,10 +188,10 @@
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          gap: 4px;
+          gap: 2.5px;
           font-weight: 400;
-          font-size: 14px;
-          line-height: 22px;
+          font-size: 8.7px;
+          line-height: 13.8px;
           color: #4d5358;
           span {
             color: #0043ce;
@@ -219,19 +204,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 2.5px;
     &-feedback {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      gap: 4px;
+      gap: 2.5px;
       font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      /* identical to box height, or 157% */
-
-      /* Cool Gray/70 */
-
+      font-size: 8.7px;
+      line-height: 13.8px;
       color: #4d5358;
       span {
         color: #0043ce;
@@ -239,8 +220,8 @@
     }
     &-version {
       font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 8.7px;
+      line-height: 13.8px;
       color: #a2a9b0;
     }
   }

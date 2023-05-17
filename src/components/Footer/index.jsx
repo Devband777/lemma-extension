@@ -14,12 +14,6 @@ export default function Footer(props) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [disabled, setDisabled] = useState(false);
-  // console.log(props.page);
-  // useEffect(() => {
-  //   if (props.page === 'Landing') {
-  //     setDisabled(true);
-  //   }
-  // }, [props.page]);
   const [stateValue, setStateValue] = useState('');
   const handleCallback = (childData) => {
     setStateValue(childData);

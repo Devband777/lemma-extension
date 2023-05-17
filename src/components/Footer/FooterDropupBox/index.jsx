@@ -10,11 +10,9 @@ import ChangeAvatar from '../../ChangeAvatar';
 import DropupBoxItem from './DropupBoxItem';
 export default function FooterDropupBox(props) {
   const handleClick = () => {
-    // Call the callback function with some data
     props.callback('change');
   };
   const otherClick = () => {
-    // Call the callback function with some data
     props.callback('');
   };
   const frequencyitems = [
@@ -59,9 +57,11 @@ export default function FooterDropupBox(props) {
     <div className="footerdropupbox">
       <div className="footerdropupbox-frequencyaction">
         <div className="footerdropupbox-frequencyaction-title">
-          <div className="footerdropupbox-frequencyaction-title-icon">
-            <img src={logo} alt="logo" />
-          </div>
+          <img
+            src={logo}
+            alt="logo"
+            className="footerdropupbox-frequencyaction-title-icon"
+          />
           <div className="footerdropupbox-frequencyaction-title-row">
             FREQUENT ACTIONS
             <img src={clock} alt="clock" />
@@ -112,9 +112,11 @@ export default function FooterDropupBox(props) {
       <div className="footerdropupbox-devider" />
       <div className="footerdropupbox-profilesetting">
         <div className="footerdropupbox-profilesetting-title">
-          <div className="footerdropupbox-profilesetting-title-icon">
-            <img url="https://zpl.io/GEBoYWd" alt="logo" />
-          </div>
+          <img
+            url="https://zpl.io/GEBoYWd"
+            alt="logo"
+            className="footerdropupbox-profilesetting-title-icon"
+          />
           <div className="footerdropupbox-profilesetting-title-row">
             PROFILE SETTINGS
             <img src={gear} alt="gear" />

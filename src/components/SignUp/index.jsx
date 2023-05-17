@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.scss';
 import { Link } from 'route-lite';
 import Landing from '../Landing';
@@ -9,7 +9,7 @@ import CardButton from '../CardButton';
 import logo1 from '../../assets/img/introimage1.png';
 import logo from '../../assets/img/icon-34.png';
 import logo2 from '../../assets/img/google.png';
-export default function Signup() {
+export default function Signup(props) {
   const [isFirstClick, setIsFirstClick] = useState(false);
   const [isLogIn, setIsLogIn] = useState(false);
   const emailsignup = () => {
@@ -19,10 +19,18 @@ export default function Signup() {
     setIsLogIn(true);
   };
   const [passwordRecoveryButton, setPasswordRecoveryButton] = useState('');
-
   const passwordRecoveryButtonClick = (passwordRecoveryButton) => {
     setPasswordRecoveryButton(passwordRecoveryButton);
   };
+  const signupVisit = () => {
+    props.callback('visit');
+  };
+  const landingVisit = () => {
+    props.callback('');
+  };
+  useEffect(() => {
+    signupVisit();
+  }, []);
   return (
     <div className="signup">
       <div className="signup-header">
@@ -60,26 +68,30 @@ export default function Signup() {
             </div>
           </div>
           <div className="signup-header-body-container">
-            <Link component={Landing}>
-              <div className="signup-header-body-container-signgoogle">
-                <div className="signup-header-body-container-signgoogle-logo">
-                  <img src={logo2} alt="asd" />
-                </div>
-                <span
-                  className={`signup-header-body-container-signgoogle-signup ${
-                    isLogIn ? 'hiden' : ''
-                  }`}
-                >
-                  Sign up with Google
-                </span>
-                <span
-                  className={`signup-header-body-container-signgoogle-login ${
-                    isLogIn ? 'hiden' : ''
-                  }`}
-                >
-                  Log in with Google
-                </span>
-              </div>
+            <Link
+              component={Landing}
+              onClick={landingVisit}
+              className="signup-header-body-container-signgoogle"
+            >
+              <img
+                src={logo2}
+                alt="asd"
+                className="signup-header-body-container-signgoogle-logo"
+              />
+              <span
+                className={`signup-header-body-container-signgoogle-signup ${
+                  isLogIn ? 'hiden' : ''
+                }`}
+              >
+                Sign up with Google
+              </span>
+              <span
+                className={`signup-header-body-container-signgoogle-login ${
+                  isLogIn ? 'hiden' : ''
+                }`}
+              >
+                Log in with Google
+              </span>
             </Link>
             <div className="signup-header-body-container-devider">
               <div className="signup-header-body-container-devider-line" />

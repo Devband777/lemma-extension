@@ -48,6 +48,12 @@ export default function Landing() {
       setCount(0);
     }
   }, [mousedOver]);
+  // const signupVisit = () => {
+  //   props.callback('');
+  // };
+  // useEffect(() => {
+  //   signupVisit();
+  // }, []);
   return (
     <div
       className="landing"

@@ -1,65 +1,65 @@
 .container {
-  padding: 16px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 16px;
-  width: 330px;
+  gap: 10px;
+  width: 210px;
   isolation: isolate;
   position: relative;
   background: #ffffff;
-  box-shadow: 0px 2px 4px rgba(224, 224, 224, 0.3);
-  border-radius: 4px;
+  box-shadow: 0px 1.2px 2.5px rgba(224, 224, 224, 0.3);
+  border-radius: 2.5px;
   &-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 2.5px;
     &-title {
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 500;
-      font-size: 16px;
-      line-height: 21px;
+      font-size: 10px;
+      line-height: 13.3px;
       color: #0043ce;
     }
     &-description {
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 8.7px;
+      line-height: 13.8px;
       color: #4d5358;
     }
   }
   &-image {
     img {
-      height: 180px;
+      height: 112.5px;
       width: 90%;
-      padding: 0px 24px;
-      border-radius: 4px;
+      padding: 0px 15px;
+      border-radius: 2.5px;
     }
   }
   &-wrapper {
-    height: 123px;
+    height: 78.3px;
     overflow: hidden;
     &-one {
       position: relative;
-      height: 126px;
+      height: 80px;
       overflow-y: hidden;
       display: none;
       flex-direction: column;
       padding: 0px;
-      gap: 16px;
+      gap: 10px;
       justify-content: space-around;
       &-timeline {
         position: absolute;
-        width: 4px;
-        height: 120px;
+        width: 2.5px;
+        height: 75px;
         background: #dde1e6;
-        top: 10px;
-        left: 6px;
+        top: 6.25px;
+        left: 3.25px;
         z-index: -1;
       }
     }
@@ -67,27 +67,27 @@
       display: none;
       flex-direction: column;
       align-items: flex-start;
-      padding: 16px;
-      gap: 16px;
+      padding: 10px;
+      gap: 10px;
       background: #f4f4f4;
-      border-radius: 4px;
+      border-radius: 2.5px;
       width: 90%;
       font-family: 'Roboto';
       font-style: normal;
       color: #4d5358;
       &-introduction {
         font-weight: 400;
-        font-size: 16px;
-        line-height: 21px;
+        font-size: 10px;
+        line-height: 13.3px;
       }
       &-partial {
         font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 8.7px;
+        line-height: 13.8px;
         span {
-          padding: 0 8px;
+          padding: 0 5px;
           mix-blend-mode: color-burn;
-          border-radius: 4px;
+          border-radius: 2.5px;
           background-color: #4589ff;
           color: #000;
         }
@@ -97,14 +97,14 @@
       display: none;
       flex-direction: column;
       align-items: flex-start;
-      padding: 16px;
+      padding: 10px;
       background: #f2f4f8;
-      border-radius: 4px;
+      border-radius: 2.5px;
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 9px;
+      line-height: 13.3px;
       color: #697077;
       width: 90%;
       &-title {
@@ -116,19 +116,19 @@
         justify-content: space-between;
         div {
           .avatarimg {
-            width: 24px;
-            height: 24px;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
-            margin-left: 8px;
+            margin-left: 5px;
           }
           .dropdownimg {
-            width: 20px;
-            height: 20px;
+            width: 12.5px;
+            height: 12.5px;
             transform: rotate(180deg);
           }
           .dropdownimg.hidden {
-            width: 20px;
-            height: 20px;
+            width: 12.5px;
+            height: 12.5px;
             display: inline;
             transform: none;
           }
