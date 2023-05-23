@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import logo1 from '../../assets/img/single.png';
-import logo2 from '../../assets/img/inputenter.png';
+import logo1 from '../../assets/img/system_forward-slash.svg';
+import logo2 from '../../assets/img/system_paper-plane-top.svg';
 import logo3 from '../../assets/img/icon.png';
 import logo4 from '../../assets/img/close.png';
-import logo5 from '../../assets/img/check.png';
+import logo5 from '../../assets/img/check.svg';
 import FooterDropupBox from './FooterDropupBox';
 import Home from '../Home';
 import { Link } from 'route-lite';

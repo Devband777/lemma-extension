@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.scss';
 import logo from '../../assets/img/icon-34.png';
-import dropdown from '../../assets/img/dropdownarrow.png';
+import dropdown from '../../assets/img/direction_angle down.svg';
 import Partial from '../Partial';
 import TextTitle from '../TextTitle';
 export default function Timeline(props) {

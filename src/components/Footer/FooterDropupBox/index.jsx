@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.scss';
-import logo from '../../../assets/img/single.png';
-import clock from '../../../assets/img/clock.png';
-import gear from '../../../assets/img/gear.png';
+import logo from '../../../assets/img/system_forward-slash.svg';
+import clock from '../../../assets/img/system_clock.svg';
+import gear from '../../../assets/img/system_gear.svg';
 import { Link } from 'route-lite';
 import Home from '../../Home';
 import SignUp from '../../SignUp';

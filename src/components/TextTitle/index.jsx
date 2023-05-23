@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './style.scss';
 import logo from '../../assets/img/icon-34.png';
-import like from '../../assets/img/like.png';
-import dislike from '../../assets/img/dislike.png';
-import likeclick from '../../assets/img/likeclick.png';
-import dislikeclick from '../../assets/img/dislikeclick.png';
+import like from '../../assets/img/application_thumbs up.svg';
+import dislike from '../../assets/img/application_thumbs down.svg';
+import likeclick from '../../assets/img/application_Solid_thumbs up.svg';
+import dislikeclick from '../../assets/img/application_Solid_thumbs down.svg';
 export default function TextTitle() {
   const [isLikeActive, setIsLikeActive] = useState(false);
   const handleLikeClick = () => {

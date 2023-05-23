@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './style.scss';
 import LanguageBox from './LanguageBox';
-import logo1 from '../../../assets/img/dropdownicon.png';
-import logo2 from '../../../assets/img/dropdownarrow.png';
+import logo1 from '../../../assets/img/accessibility_language.svg';
+import logo2 from '../../../assets/img/direction_angle down.svg';
 export default function LanguageDropdown() {
   const [isExpanded, setIsExpanded] = useState(false);
   const handleClick = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.scss';
-import info from '../../assets/img/info.png';
+import info from '../../assets/img/system_circle-info.svg';
 import Home from '../Home';
 export default function Protip() {
   const [isDismiss, setIsDismiss] = useState(false);

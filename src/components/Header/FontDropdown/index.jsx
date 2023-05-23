@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.scss';
-import logo1 from '../../../assets/img/dropdownicon1.png';
-import logo2 from '../../../assets/img/dropdownarrow.png';
+import logo1 from '../../../assets/img/accessibility_textsize.svg';
+import logo2 from '../../../assets/img/direction_angle down.svg';
 import FontBox from './FontBox';
 export default function FontDropdown() {
   const [isExpanded, setIsExpanded] = useState(false);

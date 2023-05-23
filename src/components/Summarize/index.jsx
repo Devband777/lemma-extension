@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import TextTitle from '../TextTitle';
 import logo from '../../assets/img/icon-34.png';
-import dropdown from '../../assets/img/dropdownarrow.png';
+import dropdown from '../../assets/img/direction_angle down.svg';
 export default function Summarize(props) {
   const [isSummarizeExpand, setIsSummarizeExpand] = useState(
     props.clickitem === 'summarize'

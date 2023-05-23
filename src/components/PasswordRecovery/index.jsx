@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'route-lite';
-import logo from '../../assets/img/inputenter.png';
+import logo from '../../assets/img/system_paper-plane-top.svg';
 import Landing from '../Landing';
 import './style.scss';
 export default function PasswordRecovery(props) {

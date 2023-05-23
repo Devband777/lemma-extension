@@ -1,5 +1,5 @@
 import React from 'react';
-import logo2 from '../../../../../assets/img/check.png';
+import logo2 from '../../../../../assets/img/check.svg';
 import './style.scss';
 export default function LanguageOne(props) {
   return (
