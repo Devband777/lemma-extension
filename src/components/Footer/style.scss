@@ -16,7 +16,6 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    height: auto;
     &-single {
       padding: 2.5px;
       border: 1px solid #dde1e6;
@@ -119,6 +118,7 @@
   }
 }
 textarea {
+  margin-top: 6px;
   resize: none;
   width: 160%;
   overflow: hidden;
