@@ -18,7 +18,9 @@ export default function Footer(props) {
   const handleCallback = (childData) => {
     setStateValue(childData);
   };
-
+  if (stateValue === 'logout') {
+    props.callback('logout');
+  }
   const handleClick = () => {
     setIsExpanded(!isExpanded);
   };

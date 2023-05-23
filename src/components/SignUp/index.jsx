@@ -10,6 +10,7 @@ import logo1 from '../../assets/img/introimage1.png';
 import logo from '../../assets/img/icon-34.png';
 import logo2 from '../../assets/img/google.png';
 export default function Signup(props) {
+  console.log('========', props);
   const [isFirstClick, setIsFirstClick] = useState(false);
   const [isLogIn, setIsLogIn] = useState(false);
   const emailsignup = () => {

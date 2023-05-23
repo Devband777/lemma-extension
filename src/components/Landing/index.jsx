@@ -10,7 +10,7 @@ import { Link } from 'route-lite';
 import './style.scss';
 export default function Landing() {
   const [count, setCount] = useState(0);
-  const [mousedOver, setMousedOver] = useState(false);
+  const [mousedOver, setMousedOver] = useState(true);
 
   const containers = [
     {
@@ -48,18 +48,8 @@ export default function Landing() {
       setCount(0);
     }
   }, [mousedOver]);
-  // const signupVisit = () => {
-  //   props.callback('');
-  // };
-  // useEffect(() => {
-  //   signupVisit();
-  // }, []);
   return (
-    <div
-      className="landing"
-      onMouseOver={() => setMousedOver(true)}
-      onMouseOut={() => setMousedOver(false)}
-    >
+    <div className="landing">
       <div className="landing-description">
         Explore new learning possibilities with Lemma.
       </div>

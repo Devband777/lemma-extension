@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0px 0px 15px;
+    color: #4d5358;
     &-label {
       width: 100%;
       display: flex;
@@ -23,7 +24,7 @@
       align-items: flex-start;
       padding: 0px 0px 5px;
       gap: 2.5px;
-      color: #4d5358;
+
       span {
         text-align: right;
         color: #fa4d56;

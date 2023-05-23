@@ -6,11 +6,20 @@ import gear from '../../../assets/img/gear.png';
 import { Link } from 'route-lite';
 import Home from '../../Home';
 import SignUp from '../../SignUp';
+import LogIn from '../../LogIn';
 import ChangeAvatar from '../../ChangeAvatar';
 import DropupBoxItem from './DropupBoxItem';
 export default function FooterDropupBox(props) {
   const handleClick = () => {
     props.callback('change');
+  };
+  const handleCallback = () => {
+    console.log('signup');
+    // props.callback('signup');
+  };
+  const logOut = () => {
+    //  props.callback('logout');
+    console.log('logout');
   };
   const otherClick = () => {
     props.callback('');
@@ -129,7 +138,10 @@ export default function FooterDropupBox(props) {
               description={profileitems[0].description}
             />
           </Link>
-          <Link component={SignUp}>
+          <Link
+            component={() => <SignUp callback={props.callback} />}
+            onClick={handleCallback}
+          >
             <DropupBoxItem
               url={profileitems[1].url}
               description={profileitems[1].description}
