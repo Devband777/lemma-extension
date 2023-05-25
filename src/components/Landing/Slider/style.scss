@@ -5,15 +5,14 @@
   align-items: flex-start;
   gap: 5px;
   width: 32.5px;
-  height: 7.5px;
-  div {
+  &-indivisual {
     width: 7.5px;
     height: 7.5px;
     border-radius: 50%;
     background: #ffffff;
     border: 1px solid #d0e2ff;
   }
-  div.active {
+  .active {
     background: #d0e2ff;
   }
 }

@@ -27,6 +27,9 @@
       &:active {
         background: #dde1e6;
       }
+      &:hover {
+        border: 1px solid #c1c7cd;
+      }
     }
     &-input {
       input {
